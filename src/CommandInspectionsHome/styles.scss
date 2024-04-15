@@ -1,0 +1,111 @@
+/** Custom Styles Go Here */
+$spfont: "Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+
+/* hide quick launch on classic pages */
+#sideNavBox{ display: none;}
+#contentBox{ margin-left: 20px;}
+
+/* Extend the WebPart full width in a modern page */
+#spPageCanvasContent div.CanvasZone > div:first-child { 
+    max-width: none; 
+    
+    div.ControlZone { 
+        margin: 24px 0 0 0; padding: 0; 
+    }
+}
+
+/* manually add font family due to corev15.css not loading on modals */
+.bs {
+    .modal-content{
+        font-family: $spfont;
+    }   
+}
+#loading-dialog.bs, #core-canvas.bs {
+    font-family: $spfont;
+}
+
+/* command grid layout */
+#command-inspection-home{
+    padding: 0 200px;
+
+    a{
+        text-decoration: none;
+    }
+
+    #HomeImage{
+        background-image: url(../../assets/OfficeNavalInspectorGeneral.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .welcome{
+        font-size: 14pt;
+    }
+
+    .pointer{
+        cursor: pointer;
+    }
+
+    .box {
+        padding: 40px 20px 20px;
+        border: 1px solid #e6e6e6;
+        position: relative;
+        background: #fafafa;
+
+        h4{
+            text-align: center;
+        }
+
+        .icon {
+            position: absolute;
+            top: -36px;
+            left: calc(50% - 36px);
+            transition: 0.2s;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 72px;
+            height: 72px;
+            color: #fff;
+            background: #295B7A;
+            cursor: pointer;
+
+            &:hover{
+                background: #fff;
+                border: 2px solid #295B7A;
+                color: #295B7A;
+            }
+
+            svg{
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+    }
+
+    #USFFIGContactsContent{
+        text-align: left;
+        padding: 20px 40px 0 40px;
+        
+        .contact-title{
+            font-weight: 500;
+        }
+    }
+
+    #CommandSites{
+        .commands-note{
+            font-style: italic;
+        }
+        #CommandSitesContent{
+            text-align: left;
+            padding: 20px 40px 0 40px;
+        }
+    }
+
+}

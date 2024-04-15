@@ -1,0 +1,45 @@
+/* PRINT STYLES */
+@media print{@page {size: landscape}}
+
+/** Ensure the form is displayed over the modal */
+#core-canvas .offcanvas {
+    min-width: 450px;
+    z-index: 1080;
+}
+
+$spfont: "Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+
+/* manually add font family due to corev15.css not loading on modals */
+.bs {
+    .modal-content{
+        font-family: $spfont;
+    }   
+}
+#loading-dialog.bs, #core-canvas.bs {
+    font-family: $spfont;
+}
+
+#headerArea{
+    height: 150px;
+    background-image: url(../../assets/pptHeader.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bs .form-label{
+    font-size: 12pt;
+    font-weight: 500;
+    margin-top: 10px;
+
+    #assessment_label{
+        color: #fff;
+    }
+}
+
+#assessmentBox{
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    font-size: 12pt;
+}

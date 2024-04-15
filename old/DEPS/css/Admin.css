@@ -1,0 +1,51 @@
+﻿/*** hide quick launch ****/
+#contentRow #sideNavBox{display:none;}
+#contentRow #contentBox{margin-left: 20px;}
+.k-loading-color{
+	opacity: .7;
+	background-color: #777777;
+}
+.k-prompt-container input.k-textbox{
+	width: 450px;
+}
+.fieldName{
+	font-weight: bold;
+}
+.inline{
+	display: inline-block;
+}
+.marginLeft,
+.inline.marginLeft{
+	margin-left: 20px;
+}
+.marginLeft-10{
+	margin-left: 10px;
+}
+.k-button{
+	padding-left: 10px;
+}
+#copyToSection,
+#sendToInspectionChecklistSection {
+	padding-top: 40px;
+	padding-bottom: 25px;
+}
+.hide {
+	visibility: hidden;
+	display:none;
+}
+
+.primary {
+	background-color:#2963a8;
+	color:white;
+}
+.secondary {
+	background-color: #f85a00;
+	color:white;
+}
+
+#submitButton{
+	margin-left:30px;float:left;margin-top:15px;
+}
+#importButton{
+	margin-left:100px;float:left;margin-top:15px;
+}

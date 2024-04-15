@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "f7676b25-f9d0-4c5f-9aa0-79add25a8e10",
+  "alias": "CommandInspectionsMasterChecklistWebPart",
+  "componentType": "WebPart",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+  "supportsFullBleed":true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "title": { "default": "Command Inspections Master Checklist" },
+    "description": { "default": "(v1.0.0.4) Displays the Command Inspections Master Checklist as an editable grid which allows IG Administrators to make batch changes and send questions/templates to EchIII sites" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "programsListName": "Programs",
+      "siteDirectoryListName": "Directory",
+      "checklistTemplateListName": "Checklist",
+      "commandInspectionChecklistsListName": "Command Inspection Checklists",
+      "adminGroup": "Inspectors General Owners",
+      "inspectorGroup": "Inspectors General Members"
+    },
+    "iconImageUrl": "assets/USFF_Logo_WebPartIcon_38x38.png"
+  }]
+}

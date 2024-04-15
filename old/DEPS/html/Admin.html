@@ -1,0 +1,83 @@
+﻿<!-- jQuery -->
+<!-- <script type="text/javascript" src="/sites/hq/SiteAssets/lib/jquery/jquery-3.4.1.min.js"></script> -->
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/Kendo/js/jquery.min.js"></script>
+
+<!-- Kendo Libraries -->
+<link rel="stylesheet" type="text/css" href="/sites/hq/SiteAssets/lib/Kendo/styles/kendo.common.min.css" />
+<link rel="stylesheet" type="text/css" href="/sites/hq/SiteAssets/lib/Kendo/styles/kendo.default.min.css" />
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/Kendo/js/kendo.all.min.js"></script>
+ 
+<!-- Application libraries -->
+<link rel="stylesheet" type="text/css" href="../SiteAssets/css/Admin.css" />
+<script type="text/javascript" src="../SiteAssets/js/Admin.js"></script>
+
+<div>
+	<div style="width:100%;text-align:center;"><h1>Command Inspections Master Checklist</h1></div>
+	<div style="padding-top:15px;">
+		<span class="fieldName">Program</span>
+		<br>
+		<div class="reqForm" id="kendoProgramDiv">
+			<input id="kendoProgramDDL" style="width:450px;">
+		</div>
+	</div>
+</div>
+
+
+<script type="text/x-kendo-template" id="toolbarTemplate">
+	<button class="k-button primary inline marginLeft" type="button" id="exportButton" onclick="window.location.href='../SiteAssets/exportquery.iqy'" title="Export Entire Checklist" alt="Export Entire Checklist">Export to Excel</button>
+    <button class="k-button primary inline marginLeft-10" type="button" id="copyButton" onclick="Admin.copy.toggleCopySection()" disabled="disabled">Copy</button>
+    <button class="k-button primary inline marginLeft-10" type="button" id="sendToInspectionChecklistButton" onclick="Admin.copy.toggleSendToSection()" disabled="disabled">Send to E3 Command Inspections Checklist</button>
+</script>
+
+<div id="copyToSection" style="display:none;" style="clear:both">
+	<div><h2>Select the copy destination:</h2></div>
+	
+	<div class="inline">
+		<div class="fieldName">Program</div>
+		<div class="reqForm" id="kendoProgramDiv">
+			<input id="kendoProgramDestDDL" style="width:450px;">
+		</div>
+	</div>
+	<div class="inline marginLeft"><button class="k-button primary" type="button" id="submitCopyButton" onclick="Admin.copy.copyQuestions()" disabled="disabled" alt="Copies the questions displayed in the grid to the selected Program" title="Copies the questions displayed in the grid to the selected Program">Copy Grid Questions Now</button></div>
+	<div class="inline marginLeft-10"><button class="k-button " type="button" id="cancelCopyButton" onclick="Admin.copy.toggleCopySection()" >Cancel Copy Action</button></div>
+	<div class="inline marginLeft-10"><button class="k-button primary" type="button" id="cancelCopyButton" onclick="Admin.utilities.prompt()" alt="Creates a new Program and repopulates the dropdown so you can select it" title="Creates a new Program and repopulates the dropdown so you can select it">Create New Program</button></div>
+
+</div>
+
+<div id="sendToInspectionChecklistSection" style="display:none;" style="clear:both">
+	<div><h2>Select the Destination Echelon 3 Command</h2></div>
+	<div class="inline">
+		<span class="fieldName">(Only Active Commmands Available)</span>
+		<br>
+		<div class="reqForm" id="kendoE3CommandDiv">
+			<input id="kendoE3CommandDDL" style="width:300px;">
+		</div>
+	</div>
+	<div class="inline marginLeft"><button class="k-button primary" type="button" id="submitSendToInspectionChecklistButton" onclick="Admin.ajax.getExistingEch3Program()" disabled="disabled" alt="Sends the questions in the current grid over to the selected Ech III site" title="Sends the questions in the current grid over to the selected Ech III site">Send Grid Questions Now</button></div>
+	<div class="inline marginLeft-10"><button class="k-button primary" type="button" id="sendAllButton" onclick="Admin.copy.confirmCopyAll()" disabled="disabled" alt="Sends the entire master checklist over to the selected Ech III site" title="Sends the entire master checklist over to the selected Ech III site">Send ALL Questions</button></div>
+	<div class="inline marginLeft-10"><button class="k-button " type="button" id="cancelCopyButton" onclick="Admin.copy.toggleSendToSection()" >Cancel Send Action</button></div>
+	<div class="inline marginLeft-10"><button class="k-button secondary" type="button" id="batchDelete" onclick="Admin.utilities.confirmBatchDelete()" disabled="disabled" alt="Deletes every question in the Ech III site checklist" title="Deletes every question in the Ech III site checklist">Delete ALL Questions</button></div>
+</div>
+
+
+<div style="clear:both"></div>
+<br>
+<div id="checklistGrid" >
+</div>
+<div id="dialog"></div>
+
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">XRVYAQAM5RQU-1743963872-9</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">0ca1bf2a-f0aa-4e9b-8f1f-850331777ce6</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://usff.navy.deps.mil/sites/hq/N01/N01IG/Inspections/_layouts/15/DocIdRedir.aspx?ID=XRVYAQAM5RQU-1743963872-9, XRVYAQAM5RQU-1743963872-9</mso:_dlc_DocIdUrl>
+<mso:Details msdt:dt="string"></mso:Details>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Landino, Michael D CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">900.000000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Hartung, John E CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100A83957EAFA902543AC8688EBF80DBB29</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<title></title></head>

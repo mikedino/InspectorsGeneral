@@ -1,0 +1,177 @@
+﻿@media (max-width: 768px) {
+  #hero-it h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.text-center{
+  text-align: center;
+}
+
+/*** hide quick launch ****/
+#contentRow #sideNavBox{display:none;}
+#contentRow #contentBox{margin-left: 20px;}
+/*** hide OOB site/page title ***/
+.ms-core-pageTitle{display: none;}
+
+.description-left-box {
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+  padding-left:25px;
+  margin-bottom: 0px; 
+}
+
+.description-list-item {
+  font-size: 14px;
+  text-align: left;
+  margin-left: 60px;
+  margin-bottom: 0px;  
+}
+.modalAuthor{
+  font-size: small;
+}
+
+.section-header .section-title {
+font-size: 32px;
+color: #111;
+text-transform: uppercase;
+text-align: center;
+font-weight: 700;
+margin-bottom: 5px;
+}
+
+.section-header .section-description {
+text-align: center;
+padding-bottom: 40px;
+color: #999;
+}
+.ui-menu-item {
+  text-align: left !important;
+  padding-left:40px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.title a {
+  color: #111;
+}
+
+/******* Welcome Section ***********/
+/*--------------------------------*/
+
+#welcome {
+  /*background:#fff;*/
+  /*padding: 40px 0 30px 0;*/
+}
+
+#welcome #siteTitleArea{
+  padding-top: 25px;
+}
+
+.welcome.description{
+  text-align:center;
+  font-size: 14pt;
+  padding: 10px;
+}
+
+/******* Boxes Section ***********/
+/*--------------------------------*/
+
+#intro{
+  background: #fff;
+  padding: 50px 0 40px 0;
+}
+
+#intro .section-header{
+  padding-bottom:40px;
+}
+
+.clickBox{
+  cursor: pointer;
+}
+
+#intro .box {
+  padding: 35px 20px 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  background: #fafafa;
+}
+
+#intro .box-static-height {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  height: 420px;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  background: #fafafa;
+}
+
+#intro .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: #295B7A;
+}
+
+#intro .icon a {
+  display: inline-block;
+}
+
+#intro .icon i {
+  color: #fff;
+  font-size: 24px;
+}
+
+#intro .box.clickBox:hover .icon, #intro div.icon.clickBox:hover {
+  background: #fff;
+  border: 2px solid #295B7A;
+}
+
+#intro .box.clickBox:hover .icon i, 
+#intro .box.clickBox:hover .icon a,
+#intro div.icon.clickBox i:hover, 
+#intro div.icon.clickBox:hover > i{
+  color: #295B7A;
+}
+
+#intro .description {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/**********ECH 3 commands***************/
+.E3Commands {
+	text-align: left !important;
+}
+.E3Commands a:visited{
+  color: #0072c6;
+}
+#echelon3Content{
+  margin-left:60px;
+}
+
+/**********contacts******************/
+.contact-title{ font-weight: 500; }

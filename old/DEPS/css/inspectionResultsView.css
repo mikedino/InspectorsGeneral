@@ -1,0 +1,8 @@
+﻿/*** hide quick launch ****/
+#contentRow #sideNavBox{display:none;}
+#contentRow #contentBox{margin-left: 20px;}
+
+.indicator{text-align: center;}
+.ms-alternating{ background-color: #f7f7f7;}
+.ms-listviewtable .ms-itmhover > TD { border-top: 1px solid #b3b3b3;}
+.ms-vh-div { font-weight: bold; }

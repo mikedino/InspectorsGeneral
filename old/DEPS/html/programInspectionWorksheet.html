@@ -1,0 +1,175 @@
+﻿<!-- jQuery -->
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/jqueryUI/jquery-ui.min.js"></script>
+<link href="/sites/hq/SiteAssets/lib/jqueryUI/jquery-ui.min.css" rel="stylesheet" type="text/css">
+
+<!-- App Files -->
+<link href="/sites/hq/N01/N01IG/Inspections/SiteAssets/css/programInspectionWorksheet.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/sites/hq/N01/N01IG/Inspections/SiteAssets/js/programInspectionWorksheet.js"></script>
+
+<div class="top-fields">
+    <div id="attachmentDiv"></div>
+</div>
+<div id="form-container">
+    <table class="grayBg">
+        <tr><th>Inspection Worksheet</th></tr>
+        <tr class="approvalRow"><td class="cell">
+            <div class="cell-title">Inspection Manager Approval: <span class="formfield approval" data-fieldname="approval"></span></div>
+            <div class="cell-title">Inspector Status<span class="formfield approval" data-fieldname="inspectorStatus"></span></div>
+            <div class="cell-title">End Of Day<span class="formfield approval" data-fieldname="endOfDay"></span></div>
+            <div class="approvalMessage">*Only the inspection team can see this record while approval is pending*</div>
+        </td></tr>
+    </table>
+    <table id="lockedTable" class="grayBg">
+        <tr class="programTitleRowLookup displayFieldRow"><td class="cell">
+            <div class="cell-title">1. Program/Process<span class="displayField">*</span></div>
+            <div class="formfield" data-fieldname="programLU"></div>
+        </td></tr>
+        <tr class="programTitleRow displayFieldRow"><td class="cell">
+            <div class="cell-title">1. Program/Process<span class="displayField">*</span></div>
+            <div class="formfield" data-fieldname="Title"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">2. Inspector Name and Inspection Date</div>
+            <div class="formfield inline" data-fieldname="inspectorName"></div>
+            <div class="formfield inline inspectionDate" data-fieldname="inspectionDate"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">3. Process Owner/Person(s) Interviewed</div>
+            <div class="formfield" data-fieldname="processOwner"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">4. Governing Instructions/Procedures</div>
+            <div class="formfield" data-fieldname="instructions"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">5. Records Reviewed</div>
+            <div class="formfield" data-fieldname="recordsReviewed"></div>
+        </td></tr>
+        <tr class="displayFieldRow"><td class="cell">
+            <div class="cell-title">6. Program/Process Compliance<span class="displayField">*</span></div>
+            <div class="formfield radio" data-fieldname="compliance"></div>
+            <div class="justification">
+                <div class="semibold">Justification for Yellow or Red:</div>
+                <div class="formfield" data-fieldname="complianceJustification"></div>
+            </div>
+        </td></tr>
+        <tr class="displayFieldRow"><td class="cell">
+            <div class="cell-title">7. Program/Process Effectiveness<span class="displayField">*</span></div>
+            <div class="formfield radio" data-fieldname="effectiveness"></div>
+            <div class="justification">
+                <div class="semibold">Justification for Yellow or Red:</div>
+                <div class="formfield" data-fieldname="effectivenessJustification"></div>
+            </div>
+        </td></tr>
+        <tr class="displayFieldRow"><td class="cell">
+            <div class="cell-title">8. Program/Process Risk<span class="displayField">*</span></div>
+            <div class="formfield radio" data-fieldname="risk"></div>
+            <div class="justification">
+                <div class="semibold">Justification for Yellow or Red:</div>
+                <div class="formfield" data-fieldname="riskJustification"></div>
+            </div>
+        </td></tr>
+        <tr class="displayFieldRow"><td class="cell">
+            <div class="cell-title">9. Overall Justification<span class="displayField">*</span></div>
+            <div class="formfield" data-fieldname="justification"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">10. Performance Measures and Metrics</div>
+            <div>a. List and describe: <span class="formfield" data-fieldname="metricsDescribe"></span></div>
+            <div>b. Do they make sense? <div class="formfield radio" data-fieldname="metricsSense"></div></div>
+            <div>c. Are they being monitored/tracked?<div class="formfield radio" data-fieldname="metricsTracked"></div></div>
+            <div>d. Are corrective actions taken when there are negative trends?<div class="formfield radio" data-fieldname="metricsActions"></div></div>
+        </td></tr>
+        <tr class="displayFieldRow"><td class="cell">
+            <div class="cell-title">11. Inspector Concerns<span class="displayField">*</span></div>
+            <div class="formfield" data-fieldname="inspectorNotes"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">12. Program Requirements that Could Not be Inspected Remotely</div>
+            <div class="formfield" data-fieldname="notInspected"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">13. Challenges/Barriers Identified by Program Manager</div>
+            <div class="formfield" data-fieldname="challenges"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">14. Deficiences</div>
+            <!-- <div class="formfield" data-fieldname="deficiences"></div> -->
+            <div id="Deficiency-container">
+                <table id="Deficiency-table" border="1" cellpadding="3">
+                    <tr id="Deficiency-table-header-row"><td></td><td class="center">No.</td><td class="center">Type</td><td>Observation</td><td class="center">Status</td></tr>
+                </table>
+                <!-- <input id="deficiency-create" type="button" value="Add New Deficiency" onclick="PIW.dialogCreate();return false;"> -->
+                <input id="createDeficiencyButton" class="createISRButton" type="button" value="Add New Deficiency" onclick="PIW.dialog.loadNewModal('Deficiency');return false;">
+            </div>
+            <div class="hideISRButtons">You cannot create a new deficiency until this record is saved.  Once saved, edit the item and add deficiences using the button.</div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">15. Process Improvement Recommendations</div>
+            <!-- <div class="formfield" data-fieldname="recommendations"></div> -->
+            <div id="Recommendation-container">
+                <table id="Recommendation-table" border="1" cellpadding="3">
+                    <tr id="Recommendation-table-header-row"><td></td><td class="center">No.</td><td class="center">Type</td><td>Observation</td><td class="center">Status</td></tr>
+                </table>
+                <!-- <input id="deficiency-create" type="button" value="Add New Deficiency" onclick="PIW.dialogCreate();return false;"> -->
+                <input id="createRecommendationButton" class="createISRButton" type="button" value="Add New Recommendation" onclick="PIW.dialog.loadNewModal('Recommendation');return false;">
+            </div>
+            <div class="hideISRButtons">You cannot create a new recommendation until this record is saved.  Once saved, edit the item and add recommendations using the button.</div>
+        </td></tr>
+        <tr class="displayFieldRow"><td class="cell">
+            <div class="cell-title">16. Best Practices<span class="displayField">*</span></div>
+            <div class="formfield" data-fieldname="bestPractices"></div>
+        </td></tr>
+        <tr><td class="cell">
+            <div class="cell-title">17. Report Narrative</div>
+            <div class="formfield" data-fieldname="narrative"></div>
+        </td></tr>
+    </table>
+    <div class="displayField">* This column is displayed on the default view to all users, for all statuses</div>
+</div>
+<div class="toolbar"></div>
+
+<div id="dialog" style="display:none;">
+    <!-- <label for="listID" class="dialogFieldName hideField">List ID</label>
+  <input type="text" name="List ID" id="listID" value="" disabled="disabled" class="text ui-widget-content ui-corner-all hideField">
+  <label for="shapeType" class="dialogFieldName hideField">Shape Type</label>
+  <input type="text" name="Shape Type" id="shapeType" value="" disabled="disabled" class="text ui-widget-content ui-corner-all hideField">
+  <label for="shapeID" class="dialogFieldName">Shape ID:</label><br/>
+  <input type="text" name="Title" id="shapeID" value="" disabled="disabled" class="text ui-widget-content ui-corner-all"><br/><br/> -->
+  <label for="number" class="dialogFieldName">Number:</label><br/>
+  <input type="text" name="number" id="number" value="" class="ui-widget-content ui-corner-all"><br/><br/>
+  <label for="typechoice" class="dialogFieldName">Type Choice:</label><br/>
+  <select name="Type Choice" id="typechoice" class="ui-widget-content ui-corner-all">
+    <option value="Deficiency">Deficiency</option>
+    <option value="Recommendation">Recommendation</option>
+  </select><br/><br/>
+  <label for="observation" class="dialogFieldName">Observation:</label><br/>
+  <textarea type="text" name="observation" id="observation" value="" rows="6" wrap="soft" class="ui-widget-content ui-corner-all textbox"></textarea><br/><br/>
+  <label for="status" class="dialogFieldName">Status:</label><br/>
+  <select name="Status" id="status" class="ui-widget-content ui-corner-all">
+    <option value="Open">Open</option>
+    <option value="Closed">Closed</option>
+  </select>
+  <input type="text" name="isrId" id="isrId" value="" disabled="disabled">
+</div>
+
+<div id="confirmDialog" title="Confirmation" style="display:none;">
+    Are you sure you want to delete this record?
+</div>
+
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">XRVYAQAM5RQU-1743963872-34</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">dd4222ae-8f30-4cbc-b795-2f99cbdd81bc</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://usff.navy.deps.mil/sites/hq/N01/N01IG/Inspections/_layouts/15/DocIdRedir.aspx?ID=XRVYAQAM5RQU-1743963872-34, XRVYAQAM5RQU-1743963872-34</mso:_dlc_DocIdUrl>
+<mso:Details msdt:dt="string"></mso:Details>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Landino, Michael D CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">3400.00000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Landino, Michael D CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100A83957EAFA902543AC8688EBF80DBB29</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<title></title></head>

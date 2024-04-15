@@ -1,0 +1,252 @@
+﻿.ms-formtable{
+	display:none; /*hide the OOTB web part table*/
+}
+
+body {
+	/* 20201024 JH changes per Brian's request: Originally font-size:12px; initial and no font-family, and no !important*/
+	font-size:14px !important;
+	font-family: Calibri !important;
+
+}
+
+.fieldName{
+    font-weight:600;
+    font-variant:small-caps;
+    font-size:12px;
+}
+
+.sp-peoplepicker-topLevel {
+	padding-left:4px !important;
+} 
+
+#formSection{
+    width:100% !important;
+    margin-top:30px !important;
+    margin-bottom: 10px !important;
+}
+
+#selfAssessmentSection {
+	border-top:thick;
+}
+
+#selfAssessmentTable{
+   background-color:#ECECEC;
+   width:100%;
+}
+
+
+#referenceSection {
+	border-top:thick;
+}
+
+#referenceTable{
+   background-color:#ECECEC;
+    width:100%;
+}
+
+
+#inspectorSection {
+	border-top:thick;
+}
+
+#inspectorTable{
+    background-color:#ECECEC;
+    width:100%;
+}
+
+
+.section-header{
+    font-weight:normal;
+    font-size: 12pt;
+}
+.section-headerBar {
+	background-color:#FFE0C1;
+}
+
+.selfAssessmentHeader {
+	background-color:#A6C2FF
+}
+
+.referenceHeader {
+	background-color:#A6C2FF
+}
+
+
+.inspectorHeader {
+	background-color:#A6C2FF
+}
+
+.col-div{
+   display: table-cell;
+   padding-right: 20px;
+}
+
+.col-small {
+	width: 30%;
+    padding-right: 10px;
+}
+
+.col-med {
+	width: 50%;
+    padding-right: 10px;
+}
+.col-medLarge {
+	width: 62%;
+    padding-right: 10px;
+}
+
+
+.col-large {
+	width: 100%;
+    padding-right: 10px;
+}
+
+.tdMaincol-div {
+	padding-left: 10px;
+	padding-bottom:5px;
+}
+
+.sectionTable {
+	height:10px;
+}
+
+.btnStyle {
+	background-color:#24a0ed;
+	color:white;
+}
+
+.btnStyle:hover {
+	color:black;
+
+}
+
+
+#idAttachmentsRow .ms-standardheader  {
+	margin-left:20px;
+	font-size:14px ;
+	font-weight:bold;
+}
+
+
+
+.hide {
+	visibility:hidden;
+	display:none;
+}
+#addl-info{
+	margin-top:5px;
+}
+
+.returnToRequesterError {
+	color:red;
+	font-weight: bold;
+}
+
+.dispStatus {
+	background-color:transparent;
+	padding-left:4px;
+	width:225px;
+	border-style:none;
+	font-weight:bold;
+	color:blue;
+}
+
+.commandContainer {
+	width:185px;
+	height:130px;
+	padding:8px;
+	border:thin;
+	border-style:solid;
+	border-width:thin;
+
+}
+
+.buildingContainer {
+	width:185px;
+	height:115px;
+	padding:8px;
+	border:thin;
+	border-style:solid;
+	border-width:thin;
+}
+
+
+.technoteButton {
+	background-color:#4F7BFF;
+	color:white;
+}
+
+.technoteButton:hover	{
+	background-color:white;
+	color:black;
+}
+
+.lbl {
+	color:black;
+	width:100px;
+}
+.technoteLabel {
+	color:black;
+	font-weight:bold;
+	font-size:14px;
+}
+
+#roomNumber .ms-long {
+	width:80px;
+}
+
+#question .ms-long {
+	width:650px;
+}
+
+#response .ms-long {
+	width:650px;
+}
+
+#recommendation .ms-long {
+	width:650px;
+}
+
+#inspectorComments .ms-long {
+	width:650px;
+}
+
+
+
+.usefulLinks {
+	color:#3366FF;
+	font-size:14px;
+}
+
+.reqStatusMsg1 {
+	color:blue;
+	margin-left:10px;
+	font-weight:bold;
+	width: 240px;
+	font-size:13px;
+}
+
+.spDDL {
+	
+}
+
+.confirmationBodyFont {
+	font-size: 14px;
+	color:blue;
+}
+#technicalComments {
+	height:100px;
+}
+.vis {
+	visibility:collapse;
+}
+.disable {
+  opacity: 0.4;
+}
+// Disable scrolling on child elements
+.disable div,
+.disable textarea {
+  overflow: hidden;
+}
+
+

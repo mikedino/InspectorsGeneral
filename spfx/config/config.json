@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "e-3-home-page-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/e3HomePage/E3HomePageWebPart.js",
+          "manifest": "./src/webparts/e3HomePage/E3HomePageWebPart.manifest.json"
+        }
+      ]
+    },
+    "master-checklist-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/masterChecklist/MasterChecklistWebPart.js",
+          "manifest": "./src/webparts/masterChecklist/MasterChecklistWebPart.manifest.json"
+        }
+      ]
+    },
+    "inspections-home-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/inspectionsHome/InspectionsHomeWebPart.js",
+          "manifest": "./src/webparts/inspectionsHome/InspectionsHomeWebPart.manifest.json"
+        }
+      ]
+    },
+    "e-3-self-assessment-tracker-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/e3SelfAssessmentTracker/E3SelfAssessmentTrackerWebPart.js",
+          "manifest": "./src/webparts/e3SelfAssessmentTracker/E3SelfAssessmentTrackerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "E3HomePageWebPartStrings": "lib/webparts/e3HomePage/loc/{locale}.js",
+    "MasterChecklistWebPartStrings": "lib/webparts/masterChecklist/loc/{locale}.js",
+    "InspectionsHomeWebPartStrings": "lib/webparts/inspectionsHome/loc/{locale}.js",
+    "E3SelfAssessmentTrackerWebPartStrings": "lib/webparts/e3SelfAssessmentTracker/loc/{locale}.js"
+  }
+}

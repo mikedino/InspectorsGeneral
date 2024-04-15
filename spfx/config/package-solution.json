@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "USFF Inspectors General",
+    "id": "3cac6fe8-6c5b-4e84-a493-3c4bb210c99b",
+    "version": "2.0.5.2",
+    "iconPath": "icon/USFF_Logo_AppIcon_96x96.png",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Mike Landino, USFF N611",
+      "websiteUrl": "https://flankspeed.sharepoint-mil.us/sites/USFF",
+      "privacyUrl": "https://flankspeed.sharepoint-mil.us/sites/USFF",
+      "termsOfUseUrl": "https://flankspeed.sharepoint-mil.us/sites/USFF",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "USFF Inspectors General custom web parts and app engine"
+      },
+      "longDescription": {
+        "default": "(v2.0.5.2) Custom web parts for the USFF Inspectors General site collection (USFF-HQ-N01IG). Contains the Master Checklist, Command Inspections Home Page, Ech III Home page, Ech III Assessment Tracker webparts along with the other Ech III home page components"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "usff-inspectors-general Feature",
+        "description": "The feature that activates elements of the usff-inspectors-general solution.",
+        "id": "8e40cd6a-32ff-4b5c-8e2e-cddc919d549a",
+        "version": "2.0.5.2"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "../../dist/usff-inspectors-general.sppkg"
+  }
+}

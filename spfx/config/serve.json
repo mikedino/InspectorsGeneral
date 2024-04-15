@@ -1,0 +1,6 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "initialPage": "https://flankspeed.sharepoint-mil.us/sites/SPFx_App_CMT/3cac6fe8-6c5b-4e84-a493-3c4bb210c99b/_layouts/workbench.aspx"
+}

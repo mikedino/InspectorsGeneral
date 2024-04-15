@@ -1,0 +1,19 @@
+$spfont: "Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+
+/* manually add font family due to corev15.css not loading on modals */
+.bs {
+    .modal-content{
+        font-family: $spfont;
+    }   
+}
+#loading-dialog.bs, #core-canvas.bs {
+    font-family: $spfont;
+}
+
+/* fix left margin on boolean fields */
+.bs .form-switch .form-check-input {
+    margin-left: 0;
+}
+.bs .form-switch .form-check-label {
+    margin-left: 0.35rem;
+}

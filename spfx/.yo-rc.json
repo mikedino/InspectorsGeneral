@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "version": "1.17.0",
+    "libraryName": "usff-inspectors-general",
+    "libraryId": "3cac6fe8-6c5b-4e84-a493-3c4bb210c99b",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "usff-inspectors-general",
+    "solutionShortDescription": "usff-inspectors-general description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "nodeVersion": "16.20.1",
+    "sdkVersions": {
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "componentType": "webpart"
+  }
+}

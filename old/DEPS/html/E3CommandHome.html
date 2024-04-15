@@ -1,0 +1,182 @@
+﻿<link rel="stylesheet" type="text/css" href="/sites/hq/SiteAssets/lib/Kendo/styles/kendo.common.min.css" />
+<link rel="stylesheet" type="text/css" href="/sites/hq/SiteAssets/lib/Kendo/styles/kendo.default.min.css" />
+<link href="/sites/hq/N01/N01IG/Inspections/SiteAssets/css/E3CommandHome.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/jquery/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/bootstrap/js/bootstrap.min.js"></script>
+<!--link href="https://usff.navy.deps.mil/sites/sandbox/SiteAssets/lib/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" /--> 
+<link href="/sites/hq/SiteAssets/lib/bootstrap/css/bootstrap-grid.min.css" type="text/css" rel="stylesheet" /> 
+
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/moment/moment.min.js"></script>
+
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/bootstrap/js/bootstrap-dialog.min.js"></script>
+<link href="/sites/hq/SiteAssets/lib/bootstrap/css/bootstrap-dialog.css" type="text/css" rel="stylesheet" />
+
+<!-- Libraries CSS Files -->
+<link href="/sites/hq/SiteAssets/lib/font-awesome/css/all.css" rel="stylesheet">
+<link href="/sites/hq/SiteAssets/lib/animate/animate.min.css" rel="stylesheet">
+
+<!--script type="text/javascript" src="../SiteAssets/lib/jquery/jquery-ui.min.js"></script-->
+<!--script type="text/javascript" src="../SiteAssets/lib/bootstrap/js/bootstrap.min.js"></script-->
+<script src="/sites/hq/SiteAssets/lib/Kendo/js/kendo.all.min.js"></script>
+
+<script type="text/javascript" src="/sites/hq/N01/N01IG/Inspections/SiteAssets/js/E3CommandHome.js"></script>
+
+
+  <!--==========================
+            Header
+  ============================-->
+  <header id="header">
+  </header><!-- #header -->
+
+  <main id="main">
+
+    <!--==========================
+      WELCOME Section
+    ============================-->
+    <section id="welcome" style="margin-top:-20px">
+        <div class="container wow fadeIn">
+  			
+          <div class="section-header">
+           
+			<div style="float:left"><img src="/sites/hq/N01/N01IG/Inspections/Images1/OfficeNavalInspectorGeneral.png">
+			</div>
+            <h3 class="section-title" style="float:left;margin-left:120px;margin-top:40px;"><span class="siteTitle"></span> Inspection Home</h3>
+          </div>
+          <div class="row intro-container" style="clear:both">
+                <p class="welcome description">Welcome to USFFC's Inspector General Inspections page for <span class="siteTitle"></span>, where you will find and enter all of the information for your upcoming inspection.</p>
+          </div>
+
+        </div>
+    </section>
+
+    <!--==========================
+      General Information Section
+    ============================-->
+    <section id="intro">
+      <div class="container wow fadeIn">
+          <!-- <div class="section-header">
+            <h3 class="section-title">General Information</h3>
+          </div> -->
+          <div class="row intro-container">
+              <!-----------------------------  LEFT COLUMN -------------------------------->
+              <div class="col-lg-6">  
+                <div class="box wow fadeInUp " data-wow-delay="0.2s" id="bulletinBoard">
+                    <div class="icon clickBox" onclick="window.open('../orgChart');" title="Upload New Org Charg" name="Upload New Org Chart"><i class="far fa-sitemap"></i></div>
+                    <h4 class="title">Organization Chart</h4>
+                    <div id="bulletinBoardContent">
+                      <a id="orgChartLink" href="">View Org Chart</a>
+                    </div>                 
+                </div>	  
+              </div>
+              <!----------------------------- END LEFT COLUMN -------------------------------->
+
+              <!-----------------------------  RIGHT COLUMN -------------------------------->
+              <div class="col-lg-6">
+				        <div class="box wow fadeInUp " data-wow-delay="0.3s" id="fvcLibrary" >
+                  <div class="icon clickBox" onclick="window.open('../Lists/programs/');" title="View/Edit the Program Identification" name="View/Edit the Program Identification"><i class="far fa-hospital"></i></div>
+                  <h4 class="title">CI Program Identification</h4>
+                  <div id="programContent"><!-- REST API content here --></div>
+                </div>
+              </div>
+              <!----------------------------- END RIGHT COLUMN -------------------------------->
+
+          </div>
+      </div>
+    </section>
+
+
+
+    <!--==========================
+      COMMAND Section
+    ============================-->
+    <section id="command">
+      <div class="container wow fadeIn">
+
+        <!-- <div class="section-header">
+          <h3 class="section-title">Command Inspections</h3>
+        </div> -->
+
+        <div class="row command-container">
+                      
+          <!-----------------------------  LEFT COLUMN -------------------------------->
+          <div class="col-lg-6">  
+
+            <div class="box wow fadeInUp clickBox" data-wow-delay="0.4s" id="selfAssessments" onclick="window.open('../SitePages/Self%20Assessment.aspx');">
+              <div class="icon"><i class="far fa-badge-check"></i></div>
+              <h4 class="title">Self Assessments</h4>
+            </div>
+
+            <div class="box wow fadeInUp clickBox" data-wow-delay="0.4s" id="documentSharing" onclick="window.open('../Shared%20Documents');">
+              <div class="icon"><i class="far fa-file-alt"></i></div>
+              <h4 class="title">Document Sharing</h4>
+            </div>
+          </div>
+    
+          <!----------------------------- END left COLUMN -------------------------------->
+          
+          <!-----------------------------  RIGHT COLUMN ---------------------------------->
+          <div class="col-lg-6">
+            <div class="box wow fadeInUp clickBox" data-wow-delay="0.4s" id="inspectionResults" onclick="window.open('../Lists/worksheet');">
+              <div class="icon"><i class="far fa-file-contract"></i></div>
+              <h4 class="title">Inspection Results</h4>
+            </div>
+
+            <div class="box wow fadeInUp clickBox" data-wow-delay="0.4s" id="isrs" onclick="window.open('../Lists/isr');">
+              <div class="icon"><i class="far fa-file-exclamation"></i></div>
+              <h4 class="title">ISR</h4>
+            </div>
+          </div>
+          <!----------------------------- END RIGHT COLUMN -------------------------------->
+
+          <!-----------------------------  CENTER SPAN COLUMN -------------------------------->
+          <div class="col-lg-12">
+            <div class="box" id="schedule" >
+              <div class="icon clickBox" onclick="window.open('../Lists/schedule/');" title="View/Edit the Inspection Schedule" name="View/Edit the Inspection Schedule"><i class="far fa-calendar"></i></div>
+              <h4 class="title">Inspection Schedule</h4>
+              <div id="scheduleContent" class="row">
+                <div class="col-sm-6 columnHeader text-left">Title</div>
+                <div class="col-sm-3 columnHeader">Start</div>
+                <div class="col-sm-3 columnHeader">End</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <div class="otherLinks text-center"><a href="/sites/hq">USFF HQ Home</a> | <a href="https://www.navy.mil/" target="_blank">Navy.mil</a> | <a href="http://foia.navy.mil/" target="_blank">Navy FOIA</a> | <a href="https://www.public.navy.mil/usff" target="_blank">USFF Public Site</a> <!--| <a href="#" onclick="javascript:ShowPopupDialog(&#39;https://usff.navy.deps.mil/COVID-19/_layouts/15/SubNew.aspx?List=%7B6F394823%2DB619%2D41D8%2D80A0%2D2FCA97E8408F%7D&Source=https%3A%2F%2Fusff%2Enavy%2Edeps%2Emil%2FCOVID%2D19%2FPages%2Findex.html&IsDlg=1&#39;)">Alert Me</a>--><!--| <a href="#" style="cursor: pointer;" data-toggle="modal" data-load-url="https://usff.navy.deps.mil/COVID-19/_layouts/15/SubNew.aspx?List=%7B6F394823%2DB619%2D41D8%2D80A0%2D2FCA97E8408F%7D&Source=https%3A%2F%2Fusff%2Enavy%2Edeps%2Emil%2FCOVID%2D19%2FPages%2Findex.html&IsDlg=1" data-target="#alertMe">Alert Me</a>--></div>
+    </div>
+
+  </footer><!-- #footer -->
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">XRVYAQAM5RQU-1743963872-20</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">ec6672bb-2958-4f75-ab58-5c02c4c780ce</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://usff.navy.deps.mil/sites/hq/N01/N01IG/Inspections/_layouts/15/DocIdRedir.aspx?ID=XRVYAQAM5RQU-1743963872-20, XRVYAQAM5RQU-1743963872-20</mso:_dlc_DocIdUrl>
+<mso:Details msdt:dt="string"></mso:Details>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Landino, Michael D CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">2000.00000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Hartung, John E CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100A83957EAFA902543AC8688EBF80DBB29</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<title>USFF COVID-19</title></head>

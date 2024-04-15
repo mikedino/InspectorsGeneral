@@ -1,0 +1,213 @@
+﻿<script type="text/javascript" src="/sites/hq/SiteAssets/lib/jquery/jquery-3.4.1.min.js"></script>
+
+<!-- Bootstrap Libraries --> 
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/bootstrap/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/bootstrap/js/bootstrap-dialog.min.js"></script>
+<link href="/sites/hq/SiteAssets/lib/bootstrap/css/bootstrap-dialog-custom.css" type="text/css" rel="stylesheet" />
+<link href="/sites/hq/SiteAssets/lib/bootstrap/css/bootstrap-dialog.css" type="text/css" rel="stylesheet" />
+
+<!-- App Files -->
+<link href="/sites/hq/N01/N01IG/Inspections/SiteAssets/css/ChecklistEdit.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/sites/hq/N01/N01IG/Inspections/SiteAssets/js/ChecklistEditForm.js"></script>
+
+<div id="form-container">
+    <table border="2" id="formSection" >
+		
+        <tr class="hide" id="selfAssessmentSection" >
+			<td >
+				<table cellpadding="6" cellspacing="5"id="selfAssessmentTable" >
+					<tr>
+						<td align="center" colspan="3" class="section-headerBar "><span class="section-header">Self Assessment</span></td>
+					</tr>
+
+					
+					 <tr id="questionNumber">
+						<td class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Question Number</span>
+									<br>
+									<span class="reqForm" data-fieldname="QuestionNumber"></span>
+								</div>
+						</td>					
+					</tr>
+					
+					<tr id="question">
+						<td class="tdMain" >
+							<div class="col-div">
+								<span class="fieldName">Question</span>
+								<br>
+								<span class="reqForm" data-fieldname="Question"></span>
+							</div>
+						</td>					
+					</tr>
+					
+					<tr id="responseChoice">
+						<td  class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Response Choice</span>
+								<span class="ms-accentText" title="This is a required field."> *</span>
+								<br>
+								<span class="reqForm" data-fieldname="ResponseChoice"></span>
+							</div>
+						</td>	
+						
+					 <tr id="response">
+						<td  class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Response</span>
+								<br>
+								<span class="reqForm" data-fieldname="Response"></span>
+							</div>
+						</td>					
+					</tr>
+
+					 <tr id="selfAssessorComments">
+						<td  class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Comments</span>
+									<br>
+									<span class="reqForm" data-fieldname="SelfAssessorComments"></span>
+								</div>
+						</td>					
+					</tr>
+
+					
+
+					<tr><td></td></tr>
+
+				</table>
+			</td>
+		</tr>
+		
+		<tr class="hide" id="referenceSection">
+			<td>
+				<table cellpadding="6" cellspacing="5"  id="referenceTable">
+					<tr>
+						<td align="center" colspan="3" class="tdMain section-headerBar "><span class="section-header">Reference</span></td>
+					</tr>
+					
+					<tr id="reference">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Reference</span>
+								<br>
+								<span class="reqForm" data-fieldname="Reference"></span>
+							</div>
+						</td>					
+					</tr>
+					
+					<tr id="referenceData">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Reference Data</span>
+								<br>
+								<span class="reqForm" data-fieldname="ReferenceData"></span>
+							</div>
+						</td>					
+					</tr>
+					
+					<tr id="referenceDate">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Reference Date</span>
+								<br>
+								<span class="reqForm" data-fieldname="ReferenceDate"></span>
+							</div>
+						</td>					
+					</tr>
+
+					<tr><td></td></tr>
+
+				</table>
+
+			</td>
+			
+		</tr>
+
+		<tr class="hide" id="inspectorSection">
+			<td>
+				<table cellpadding="6" cellspacing="5"  id="inspectorTable">
+					<tr>
+						<td align="center" colspan="3" class="tdMain section-headerBar inspectorHeader"><span class="section-header">Inspector</span></td>
+					</tr>
+					<tr id="assignedInspector">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Assigned Inspector</span>
+								<br>
+								<span class="reqForm" data-fieldname="AssignedInspector"></span>
+							</div>
+						</td>					
+					</tr>
+					<tr id="isRecommendation">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Is a Recommendation</span>
+								<br>
+								<span class="reqForm" data-fieldname="IsRecommendation"></span>
+							</div>
+						</td>					
+					</tr>					
+					<tr id="recommendation">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Recommendation</span>
+								<br>
+								<span class="reqForm" data-fieldname="Recommendation"></span>
+							</div>
+						</td>					
+					</tr>
+					<tr id="isDeficiency">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Is a Deficiency</span>
+								<br>
+								<span class="reqForm" data-fieldname="IsDeficiency"></span>
+							</div>
+						</td>					
+					</tr>		
+					<tr id="deficiency">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Deficiency</span>
+								<br>
+								<span class="reqForm" data-fieldname="Deficiency"></span>
+							</div>
+						</td>					
+					</tr>			
+					<tr id="inspectorComments">
+						<td colspan="2" class="tdMain">
+							<div class="col-div">
+								<span class="fieldName">Inspector Comments</span>
+								<br>
+								<span class="reqForm" data-fieldname="InspectorComments"></span>
+							</div>
+						</td>					
+					</tr>
+					<tr><td></td></tr>
+
+				</table>
+
+			</td>
+			
+		</tr>
+
+    </table>
+    
+</div>
+
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">XRVYAQAM5RQU-1743963872-13</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">d513948e-cace-4874-80f5-9eb588711193</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://usff.navy.deps.mil/sites/hq/N01/N01IG/Inspections/_layouts/15/DocIdRedir.aspx?ID=XRVYAQAM5RQU-1743963872-13, XRVYAQAM5RQU-1743963872-13</mso:_dlc_DocIdUrl>
+<mso:Details msdt:dt="string"></mso:Details>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Landino, Michael D CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">1300.00000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Hartung, John E CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100A83957EAFA902543AC8688EBF80DBB29</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<title></title></head>

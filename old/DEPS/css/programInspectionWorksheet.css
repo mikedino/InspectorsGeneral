@@ -1,0 +1,105 @@
+﻿/*** hide quick launch ****/
+#contentRow #sideNavBox{display:none;}
+#contentRow #contentBox{margin-left: 20px;}
+
+div#WebPartWPQ2{
+	display:none; /*hide the OOTB web part table*/
+}
+#form-container > table {
+    width: 900px;
+    border: 1px solid #000;
+}
+#lockedTable{
+    display: none;
+}
+.grayBg{
+    background-color: #f1f1f1 !important;
+}
+.displayFieldRow{
+    background-color: #d4e7f5;
+}
+#form-container th {
+    font-size: 12pt;
+    background-color: #c3c3c3;
+}
+.center{
+    text-align: center;
+}
+.cell{
+    padding: 10px 5px;
+    border: 1px solid #000;
+}
+.cell-title{
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+.cell-contents{
+    padding: 5px;
+}
+.radio{
+    padding-left: 30px;
+}
+.justification{
+    padding-top: 5px;
+    display: none;
+}
+.inline{
+    display: inline-block;
+}
+.inspectionDate{
+    vertical-align: top;
+    padding-left: 10px;
+}
+.semibold{
+    font-weight: 500;
+}
+.approvalRow{background-color: #ffeee0;}
+.approvalMessage{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+.approvalRow > td.cell {
+    border-top-width: 2px;
+}
+.displayField{
+    color: red;
+    font-weight: bold;
+}
+/*****  tables *************/
+#Deficiency-table,
+#Recommendation-table{
+    width: 100%;
+}
+#Deficiency-table-header-row,
+#Recommendation-table-header-row{
+    background-color: #c1c1c1;
+    font-weight: bold;
+}
+.createISRButton{
+    margin-top: 9px;
+}
+.hideISRButtons{
+    display: none;
+    font-style: italic;
+    padding-left: 10px;
+}
+.edit-column{
+    width: 17px;
+}
+.number-column{
+    width: 25px;
+}
+.type-column{
+    width: 103px;
+}
+.status-column{
+    width: 52px;
+}
+#dialog #observation{
+    width: 95%;
+}
+#dialog #isrId{
+    display: none;
+}

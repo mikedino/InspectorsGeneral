@@ -1,0 +1,34 @@
+//@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore';
+
+/** Custom Styles Go Here */
+$spfont: "Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+
+.dropdown-menu{
+    width: fit-content;
+}
+
+/* Extend the WebPart full width in a modern page */
+#spPageCanvasContent div.CanvasZone > div:first-child { 
+    max-width: none; 
+    
+    div.ControlZone { 
+        margin: 24px 0 0 0; padding: 0; 
+    }
+}
+
+/* manually add font family due to corev15.css not loading on modals */
+.bs {
+    .modal-content{
+        font-family: $spfont;
+    }   
+}
+#loading-dialog.bs, #core-canvas.bs, .tippy-content.bs {
+    font-family: $spfont;
+}
+
+/* custom style for drop-down to avoid cutting off selections and/or pushing screen height */
+[data-tippy-root] {
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

@@ -1,0 +1,84 @@
+﻿ <!-- Main Stylesheet Files -->
+ <link rel="stylesheet" type="text/css" href="/sites/hq/SiteAssets/lib/Kendo/styles/kendo.common.min.css" />
+ <link rel="stylesheet" type="text/css" href="/sites/hq/SiteAssets/lib/Kendo/styles/kendo.default.min.css" />
+<link href="/sites/hq/N01/N01IG/Inspections/SiteAssets/css/ChecklistGrid.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/jquery/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- <link href="/sites/hq/SiteAssets/lib/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />  -->
+
+<script type="text/javascript" src="/sites/hq/SiteAssets/lib/bootstrap/js/bootstrap-dialog.min.js"></script>
+<link href="/sites/hq/SiteAssets/lib/bootstrap/css/bootstrap-dialog.css" type="text/css" rel="stylesheet" />
+
+
+<script src="/sites/hq/SiteAssets/lib/Kendo/js/kendo.all.min.js"></script>
+
+<script type="text/javascript" src="/sites/hq/N01/N01IG/Inspections/SiteAssets/js/ChecklistGrid.js"></script>
+
+<!-- <script type="text/x-kendo-template" id="toolbarTemplate">
+	<div style="float:right;padding:5px;">User Role(s): </div>
+</script> -->
+
+<div>
+	<p>
+		<ol>
+			<!-- <li>Choose the Functional Area, then the Program.</li> -->
+			<li>Choose the correct Program.</li>
+			<li>Edit the Response Choice and Response Text in the grid.</li>
+			<li><span style="color:red;">Don't forget to save your changes!</span></li>
+			<li>When you are finished, complete the self-assessment overview (button below).</li>
+		</ol>
+	</p>
+	<!-- <div style="float:left;">
+		<span class="fieldName" >Functional Area</span>
+		<br>
+		<div class="reqForm" id="kendoFunctionalAreasDiv">
+			<input id="kendoFunctionalAreasDDL" style="width:300px;">
+		</div>
+	</div> -->
+	<div style="float:left;">
+		<span class="fieldName" >Program</span>
+		<br>
+		<div class="reqForm" id="kendoProgramDiv">
+			<input id="kendoProgramDDL" style="width:450px;">
+		</div>
+	</div>
+
+</div>
+
+<div style="clear:both"></div>
+<br>
+<div id="checklistGrid" >
+</div>
+
+<!-- NO LONGER NEED PPT FILE <div id="pptContainer">
+	<p>In addition to the checklist, please complete the self-assessment overview.</p>
+	<button class="k-button primary" type="button" id="pptButton" onclick="location.href='/sites/hq/N01/N01IG/Inspections/rfi/Program_Self-Assessment_Template.ppt'">Save Self-Assessment Template</button>
+</div> -->
+
+<div class="buttonContainer newAssessment">
+	<p>In addition to the checklist, please complete the self-assessment overview for this program.</p>
+	<button class="k-button primary" type="button" onclick="javascript:Grid.utilities.newDialog(); return false;" href="javascript:">Complete Self-Assessment Overview</button>
+</div>
+
+<div class="buttonContainer displayAssessment">
+	<p>The self-assessment overview for this program has already been created. Click this button to view the record.</p>
+	<button class="k-button primary" type="button" onclick="javascript:Grid.utilities.displayDialog(); return false;" href="javascript:">Open Self-Assessment Overview</button>
+</div>
+
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">XRVYAQAM5RQU-1743963872-19</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">62f15d61-5b76-4664-b1e7-026d50fed9f5</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://usff.navy.deps.mil/sites/hq/N01/N01IG/Inspections/_layouts/15/DocIdRedir.aspx?ID=XRVYAQAM5RQU-1743963872-19, XRVYAQAM5RQU-1743963872-19</mso:_dlc_DocIdUrl>
+<mso:Details msdt:dt="string"></mso:Details>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Landino, Michael D CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">900.000000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Hartung, John E CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100A83957EAFA902543AC8688EBF80DBB29</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<title></title></head>

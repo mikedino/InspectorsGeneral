@@ -1,0 +1,29 @@
+﻿/*** hide quick launch ****/
+#contentRow #sideNavBox{display:none;}
+#contentRow #contentBox{margin-left: 20px;}
+
+#copyToSection {
+	margin-top: 40px;
+}
+
+.hide {
+	visibility: hidden;
+	display:none;
+}
+
+.primary {
+	background-color:#2963a8;
+	color:white;
+}
+
+.secondary{
+	background-color:#f35800;
+	color:white;
+}
+
+.buttonContainer{
+	margin-top: 20px;
+	border-top: 2px solid #777;
+}
+
+.newAssessment, .displayAssessment{ display: none;}

@@ -1,0 +1,143 @@
+﻿<link rel="stylesheet" type="text/css" href="../SiteAssets/lib/Kendo/styles/kendo.common.min.css" />
+<link rel="stylesheet" type="text/css" href="../SiteAssets/lib/Kendo/styles/kendo.default.min.css" />
+<link href="../SiteAssets/css/InspectionsHome.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../SiteAssets/lib/jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../SiteAssets/lib/bootstrap/js/bootstrap.min.js"></script>
+<link href="../SiteAssets/lib/bootstrap/css/bootstrap-grid.min.css" type="text/css" rel="stylesheet" /> 
+
+<script type="text/javascript" src="../SiteAssets/lib/bootstrap/js/bootstrap-dialog.min.js"></script>
+<link href="../SiteAssets/lib/bootstrap/css/bootstrap-dialog.css" type="text/css" rel="stylesheet" />
+
+  <!-- Libraries CSS Files -->
+  <link href="../SiteAssets/lib/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../SiteAssets/lib/animate/animate.min.css" rel="stylesheet">
+
+<!--script type="text/javascript" src="../SiteAssets/lib/jquery/jquery-ui.min.js"></script-->
+<!--script type="text/javascript" src="../SiteAssets/lib/bootstrap/js/bootstrap.min.js"></script-->
+<script src="../SiteAssets/lib/Kendo/js/kendo.all.min.js"></script>
+
+<script type="text/javascript" src="../SiteAssets/js/InspectionsHome.js"></script>
+
+
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+  </header><!-- #header -->
+
+
+  <main id="main">
+
+    <!--==========================
+      WELCOME Section
+    ============================-->
+    <section id="welcome" style="margin-top:-20px">
+      <div class="container wow fadeIn">
+          <div class="section-header row">
+            <div id="siteImage" class="col-lg-4" ><img src="/sites/InspectorsGeneral/Images1/OfficeNavalInspectorGeneral.png"></div>
+            <div id="siteTitleArea" class="col-lg-8">
+              <div class="section-title siteTitle"></div>
+              <div class="section-title">Home</div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="intro-container" style="clear:both">  
+          <p class="welcome description">Welcome to USFFC's IG <span class="siteTitle"></span> Home page, where you will find all of the information for your upcoming inspections.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!--==========================
+      General Information Section
+    ============================-->
+    <section id="intro">
+      <div class="container wow fadeIn">
+        <div class="row intro-container">
+            
+            <!-----------------------------  LEFT COLUMN -------------------------------->
+            <div class="col-lg-6">  
+
+              <div class="box wow fadeInUp" data-wow-delay="0.2s" id="fleetInspections">
+                  <div id="link1" class="icon clickBox" title="Click here to view Fleet Inspections" name="Click here to view Fleet Inspections"><i class="far fa-ship"></i></div>
+                  <h4 id="title1" class="title" ><!--Fleet Inspections--></h4>
+                  <div id="fleetInspectionsContent"></div>
+              </div>
+
+              <div class="box wow fadeInUp" data-wow-delay="0.2s" id="inspectionPlanNotice"  >
+                <div id="link3" class="icon clickBox" title="Click here to view the Inspection Plan Notice" name="Click here to view the Inspection Plan Notice"><i class="far fa-exclamation-square"></i></div>
+                <h4 id="title3" class="title"><!--Inspection Plan Notice--></h4>
+                <div id="inspectionPlanNoticeContent"></div>
+              </div>	
+              
+              <div class="box wow fadeInUp" data-wow-delay="0.4s" >
+                  <div id="link5" class="icon clickBox" title="Click here to edit the USFF Inspector General contacts" name="Click here to edit the USFF Inspector General contacts"><i class="far fa-chalkboard-teacher"></i></div>
+                  <h4 id="title5" class="title"><!--USFF IG Contacts--></h4>
+                  <div id="contactsContent"></div>
+              </div>				  
+
+            </div>
+            <!----------------------------- END LEFT COLUMN -------------------------------->
+
+            <!-----------------------------  RIGHT COLUMN -------------------------------->
+            <div class="col-lg-6">
+      
+              <div class="box wow fadeInUp" data-wow-delay="0.3s" id="inspectionChecklists">
+                <div id="link2" class="icon clickBox" title="Click here to view/edit the Master Inspection Checklist" name="Click here to view/edit the Master Inspection Checklist"><i class="far fa-tasks"></i></div>
+                <h4 id="title2" class="title"><!--Inspection Checklists--></h4>
+                <div id="inspectionChecklistContent"></div>
+              </div>
+
+              <div class="box wow fadeInUp" data-wow-delay="0.2s" id="inspectionRFIs"  >
+                <div id="link4" class="icon clickBox" title="Click here to view RFIs" name="Click here to view RFIs" ><i class="far fa-copy"></i></div>
+                <h4 id="title4" class="title"><!--Inspection RFIs--></h4>
+                <div id="inspectionRFIContent"></div>
+              </div>
+
+              <div class="box wow fadeInUp" data-wow-delay="0.4s"  >
+                <div id="link6" class="icon clickBox" title="Click here to view/edit the directory of the command sites" name="Click here to view/edit the directory of the command sites" ><i class="far fa-anchor"></i></div>
+                <h4 id="title6" class="title"><!--Echelon 3 Commands--></h4>
+                <p style="font-style: italic">Note: only active sites have links</p>
+                <div id="echelon3Content"></div>
+              </div>
+
+            </div>
+            <!----------------------------- END RIGHT COLUMN -------------------------------->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+      </div>
+    </div>
+
+      <div class="col-sm-12">
+        <div class="otherLinks text-center"><a href="/sites/hq">USFF HQ Home</a> | <a href="https://www.navy.mil/" target="_blank">Navy.mil</a> | <a href="http://foia.navy.mil/" target="_blank">Navy FOIA</a> | <a href="https://www.public.navy.mil/usff" target="_blank">USFF Public Site</a> <!--| <a href="#" onclick="javascript:ShowPopupDialog(&#39;https://usff.navy.deps.mil/COVID-19/_layouts/15/SubNew.aspx?List=%7B6F394823%2DB619%2D41D8%2D80A0%2D2FCA97E8408F%7D&Source=https%3A%2F%2Fusff%2Enavy%2Edeps%2Emil%2FCOVID%2D19%2FPages%2Findex.html&IsDlg=1&#39;)">Alert Me</a>--><!--| <a href="#" style="cursor: pointer;" data-toggle="modal" data-load-url="https://usff.navy.deps.mil/COVID-19/_layouts/15/SubNew.aspx?List=%7B6F394823%2DB619%2D41D8%2D80A0%2D2FCA97E8408F%7D&Source=https%3A%2F%2Fusff%2Enavy%2Edeps%2Emil%2FCOVID%2D19%2FPages%2Findex.html&IsDlg=1" data-target="#alertMe">Alert Me</a>--></div>
+      </div>
+
+  </footer><!-- #footer -->
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">XRVYAQAM5RQU-1743963872-23</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">4e0a6947-61e7-4521-aa78-ed88ec201d49</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://usff.navy.deps.mil/sites/hq/N01/N01IG/Inspections/_layouts/15/DocIdRedir.aspx?ID=XRVYAQAM5RQU-1743963872-23, XRVYAQAM5RQU-1743963872-23</mso:_dlc_DocIdUrl>
+<mso:Details msdt:dt="string"></mso:Details>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Landino, Michael D CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">2000.00000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Hartung, John E CTR USN USFFC (USA)</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100A83957EAFA902543AC8688EBF80DBB29</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<title>USFF COVID-19</title></head>
